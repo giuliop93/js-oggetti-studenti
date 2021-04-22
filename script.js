@@ -39,14 +39,20 @@ for (i = 0; i < arrayStudenti.length; i++) {
 // Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 var nomeStudente = prompt("inserisci un nome");
 var cognomeStudente = prompt("inserisci un cognome");
-var etaStudente = prompt("inserisci un'età");
+var etaStudente = parseInt(prompt("inserisci un'età"));
 
 var nuovoStudente = {
-    nome: nomeStudente,
-    cognome: cognomeStudente,
+    nome: capitalize(nomeStudente),
+    cognome: capitalize(cognomeStudente),
     eta: etaStudente
+}
+
+function capitalize (parola) {
+    var primaLettera = parola[0].toUpperCase();
+    var restoParola = parola.slice(1);
+    return primaLettera + restoParola;
 }
 
 
 arrayStudenti.push(nuovoStudente);
-console.log(arrayStudente);
+console.log(arrayStudenti);
