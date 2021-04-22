@@ -10,42 +10,43 @@ for (var key in studente) {
     console.log(key, studente[key]);
 }
 // Creare un array di oggetti di studenti.
-var arrayStudenti = [];
-var studenteUno = {
-    nome: Uto,
-    cognome: Ughi,
-    eta: 21
-};
+var arrayStudenti = [
+    {
+        nome: "Uto",
+        cognome: "Ughi",
+        eta: 21
+    },
+    {
+        nome: "Tonio",
+        cognome: "Cartonio",
+        eta: 29
+    },
+    {
+        nome: "Tania",
+        cognome: "Cagnotto",
+        eta: 67
+    }
+];
 
-var studenteDue = {
-    nome: Tonio,
-    cognome: Cartonio,
-    eta: 22
-}
+console.log(arrayStudenti);
 
-var studenteTre = {
-    nome: Tania,
-    cognome: Cagnotto,
-    eta: 22
-}
-
-for (i = 0; i < 3; i++){
-    arrayStudenti.push()
-}
 // Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
-
-
+for (i = 0; i < arrayStudenti.length; i++) {
+    var studenteCorrente = arrayStudenti[i];
+    
+    console.log(studenteCorrente.nome, studenteCorrente.cognome)
+};
 // Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
-// function nuovoStudente (){
-// for (i = 0; i < 3; i++) {
-//     nuovOggettoStud = prompt('Inserisci nome studente');
-//         if(!nuovoOggettoStud){
+var nomeStudente = prompt("inserisci un nome");
+var cognomeStudente = prompt("inserisci un cognome");
+var etaStudente = prompt("inserisci un'età");
 
-//         } else {
-//             alert('Nome inserito non valido')
-//         }
+var nuovoStudente = {
+    nome: nomeStudente,
+    cognome: cognomeStudente,
+    eta: etaStudente
+}
 
-//     nuovOggettoStud = prompt('Inserisci cognome studente');
-//     nuovOggettoStud = prompt('Inserisci età studente');
-// }
-// }
+
+arrayStudenti.push(nuovoStudente);
+console.log(arrayStudente);
